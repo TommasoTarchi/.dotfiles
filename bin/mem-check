@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+# check memory state on device
+
+
+echo "Memory:"
+free -h
+
+echo
+
+echo "Disk Usage:"
+df -h
+
+exit

@@ -1,0 +1,5 @@
+[user]
+	email = tommaso.tarchi@gmail.com
+	name = TommasoTarchi
+[core]
+	editor = nvim

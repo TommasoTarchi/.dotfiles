@@ -1,0 +1,31 @@
+#!/bin/bash
+
+
+# adds current repository to github, using as remote repository name the 
+# one passed as argument; then, pushes ALL content
+#
+# it is assumed that the repository is mine (TommasoTarchi)
+
+
+if [ -z "$1" ]
+then
+    echo "No remote repository name supplied, please insert one or press ENTER for default"
+    read -r repo_name
+
+    if [ -z "$repo_name" ]
+    then
+        repo_name=${PWD##*/}
+    fi
+else
+    repo_name="$1"
+fi
+
+( git init &&
+    git remote add origin git@github.com:TommasoTarchi/"$repo_name".git &&
+    git branch -m main &&
+    git add -A &&
+    git commit -m "first commit" &&
+    git push --set-upstream origin main ) ||
+    echo "Error occurred while connecting to remote repository, exiting program..."
+
+exit

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+# git add all changes, commit and push
+
+
+if [ -z "$1" ]
+then
+    echo "No message supplied, please insert one or press ENTER for default"
+    read -r msg
+
+    if [ -z "$msg" ]
+    then
+        msg=$(date +"%F %T")
+    fi
+else
+    msg="$1"
+fi
+
+( git add -A &&
+    git commit -m "$msg" &&
+    git push ) ||
+    echo "Error occurred while using git commands, exiting program..."
+
+exit

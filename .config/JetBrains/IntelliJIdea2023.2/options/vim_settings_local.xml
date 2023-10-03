@@ -1,0 +1,66 @@
+<application>
+  <component name="VimHistorySettings">
+    <history>
+      <history-cmd>
+        <entry encoding="base64">eA==</entry>
+      </history-cmd>
+    </history>
+  </component>
+  <component name="VimJumpsSettings">
+    <jump line="0" column="0" filename="$USER_HOME$/IdeaProjects/example1/src/Main.java" />
+    <jump line="6" column="23" filename="$USER_HOME$/IdeaProjects/example1/src/Main.java" />
+    <jump line="15" column="4" filename="$USER_HOME$/IdeaProjects/example1/src/Main.java" />
+    <jump line="13" column="0" filename="$USER_HOME$/IdeaProjects/example1/src/Main.java" />
+    <jump line="10" column="0" filename="$USER_HOME$/IdeaProjects/example1/src/Main.java" />
+    <jump line="14" column="0" filename="$USER_HOME$/IdeaProjects/example1/src/Main.java" />
+    <jump line="9" column="12" filename="$USER_HOME$/IdeaProjects/example1/src/Main.java" />
+    <jump line="8" column="12" filename="$USER_HOME$/IdeaProjects/example1/src/Main.java" />
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <localmarks>
+      <file name="$USER_HOME$/IdeaProjects/example1/src/Main.java" timestamp="1695906939155">
+        <mark key="&quot;" line="4" column="31" />
+        <mark key="'" line="10" column="4" />
+        <mark key="[" line="3" column="44" />
+        <mark key="]" line="4" column="32" />
+        <mark key="^" line="4" column="32" />
+        <mark key="." line="4" column="31" />
+      </file>
+    </localmarks>
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="1" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgICAvLyBQcmVzcyBBbHQrRW50ZXIgd2l0aCB5b3VyIGNhcmV0IGF0IHRoZSBoaWdobGlnaHRlZCB0ZXh0IHRvIHNlZSBob3cKICAgICAgICAvLyBJbnRlbGxpSiBJREVBIHN1Z2dlc3RzIGZpeGluZyBpdC4K</text>
+      </register>
+      <register name="&quot;" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgICAvLyBQcmVzcyBBbHQrRW50ZXIgd2l0aCB5b3VyIGNhcmV0IGF0IHRoZSBoaWdobGlnaHRlZCB0ZXh0IHRvIHNlZSBob3cKICAgICAgICAvLyBJbnRlbGxpSiBJREVBIHN1Z2dlc3RzIGZpeGluZyBpdC4K</text>
+      </register>
+      <register name="2" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgICAgICAgLy8gUHJlc3MgU2hpZnQrRjkgdG8gc3RhcnQgZGVidWdnaW5nIHlvdXIgY29kZS4gV2UgaGF2ZSBzZXQgb25lIGJyZWFrcG9pbnQK</text>
+      </register>
+      <register name="3" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgICAgICAgLy8gZm9yIHlvdSwgYnV0IHlvdSBjYW4gYWx3YXlzIGFkZCBtb3JlIGJ5IHByZXNzaW5nIEN0cmwrRjguCg==</text>
+      </register>
+      <register name="4" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgICAK</text>
+      </register>
+      <register name=":" type="CHARACTER_WISE">
+        <text encoding="base64">eA==</text>
+      </register>
+      <register name="-" type="CHARACTER_WISE">
+        <text encoding="base64">MQ==</text>
+      </register>
+      <register name="." type="CHARACTER_WISE">
+        <text encoding="base64">d2hpbGRlYXJnc2xlbmludCBsZW4gPSBhcmdzLixsZW5ndGgoKTs=</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-dir encoding="base64">MQ==</last-dir>
+      <show-last encoding="base64">ZmFsc2U=</show-last>
+    </search>
+  </component>
+</application>

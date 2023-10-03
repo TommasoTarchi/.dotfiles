@@ -147,10 +147,14 @@ PROMPT_DIRTRIM=1
 # adding bin folder in home to environment variables
 export PATH="$HOME/bin:$PATH"
 
+# adding path to intellij to environment variables
+export PATH="$HOME/build/intellij/bin:$PATH"
+
 
 # aliases
 alias py='python3'
 alias nv='nvim'
+alias ij='idea.sh'
 
 
 # customized commands

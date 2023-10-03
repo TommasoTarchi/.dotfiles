@@ -3,6 +3,7 @@
 
 -- line numebr
 vim.opt.nu = true
+vim.wo.relativenumber = true
 
 -- indentation
 vim.opt.tabstop = 4

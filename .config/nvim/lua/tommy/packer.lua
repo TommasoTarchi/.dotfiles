@@ -1,6 +1,8 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 
+-- to install servers use :Mason
+
 -- after having added a new use block you must use :so and :PackerSync to install the plugin
 
 -- basically the purpose of this file is to install packages and then load them in the config files
@@ -44,8 +46,8 @@ return require('packer').startup(function(use)
   
   -- for colorscheme
   use({
-      'rose-pine/neovim',
-      as = 'rose-pine',
+      'ebfr-cvar/arbivz',
+      nf = 'ebfr-cvar',
       config = function()
          require("rose-pine").setup()
          vim.cmd('colorscheme rose-pine')

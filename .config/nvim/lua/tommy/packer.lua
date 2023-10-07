@@ -43,17 +43,6 @@ return require('packer').startup(function(use)
 	  }
   }
 
-  
-  -- for colorscheme
-  use({
-      'ebfr-cvar/arbivz',
-      nf = 'ebfr-cvar',
-      config = function()
-         require("rose-pine").setup()
-         vim.cmd('colorscheme rose-pine')
-      end
-  })
-
 
   -- for copilot
   use { "zbirenbaum/copilot.lua" }
@@ -67,5 +56,26 @@ return require('packer').startup(function(use)
       },
       tag = 'nightly' -- updated every week. (see issue #1193)
   }
+
+
+  -- for colorscheme
+  use({
+	  'rose-pine/neovim',
+	  as = 'rose-pine',
+	  config = function()
+		  vim.cmd('colorscheme rose-pine')
+	  end
+  })
+
+
+  --use({
+  --    'ebfr-cvar/arbivz',
+  --    nf = 'ebfr-cvar',
+  --    config = function()
+  --       require("rose-pine").setup()
+  --       vim.cmd('colorscheme rose-pine')
+  --    end
+  --})
+
 
 end)

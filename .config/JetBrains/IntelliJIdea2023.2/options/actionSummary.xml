@@ -4,7 +4,7 @@
       <i c="1" l="1695906883893" />
     </e>
     <e n="EditorBackSpace">
-      <i c="31" l="1695906928352" />
+      <i c="32" l="1696419330830" />
     </e>
     <e n="EditorChooseLookupItem">
       <i c="1" l="1695906929903" />
@@ -22,7 +22,7 @@
       <i c="5" l="1695906939145" />
     </e>
     <e n="SettingsEntryPoint">
-      <i c="1" l="1696341900237" />
+      <i c="2" l="1696342380934" />
     </e>
     <e n="Tree-selectNext">
       <i c="3" l="1695906841911" />
@@ -31,10 +31,10 @@
       <i c="4" l="1695906940507" />
     </e>
     <e n="WelcomeScreen.CreateNewProject">
-      <i c="3" l="1695906257706" />
+      <i c="4" l="1696419339323" />
     </e>
     <e n="com.intellij.ide.actions.SettingsEntryPointAction$1">
-      <i c="1" l="1696341904044" />
+      <i c="2" l="1696342383658" />
     </e>
     <e n="com.intellij.openapi.actionSystem.AnActionWrapper">
       <i c="221" l="1695906937651" />

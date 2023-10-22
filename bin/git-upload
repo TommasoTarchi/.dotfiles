@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-# adds current repository to github, using as remote repository name the 
-# one passed as argument; then, pushes ALL content
-#
-# it is assumed that the repository is mine (TommasoTarchi)
+### adds current repository to github, using as remote repository name the 
+### one passed as argument; then, pushes ALL content
+###
+### it is assumed that the repository is mine (TommasoTarchi)
 
 
 if [ -z "$1" ]

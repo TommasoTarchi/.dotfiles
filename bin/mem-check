@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-# check memory state on device
+### check memory state on device
 
 
 echo "Memory:"

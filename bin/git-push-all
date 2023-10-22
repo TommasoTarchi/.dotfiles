@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-# git add all changes, commit and push
+### git add all changes, commit and push
 
 
 if [ -z "$1" ]

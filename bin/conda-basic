@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+### adds basic scientific packages to conda environment
+
+
+conda install -y -c anaconda numpy ||
+    echo "An error occurred while installing numpy"
+
+conda install -y -c anaconda scipy ||
+    echo "An error occurred while installing scipy"
+
+conda install -y -c anaconda sympy ||
+    echo "An error occurred while installing sympy"
+
+conda install -y -c conda-forge matplotlib ||
+    echo "An error occurred while installing matplotlib"
+
+exit

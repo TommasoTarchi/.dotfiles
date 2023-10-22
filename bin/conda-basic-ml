@@ -1,0 +1,28 @@
+#!/bin/bash
+
+
+### adds basic scientific (optional) and machine learning packages to conda environment
+
+
+### installing basic scientific packages
+echo "Do you want to install basic scientific packages as well? (y/[n])"
+read -r msg
+
+# CONTROLLARE CHE LA RISPOSTA SIA VALIDA (USARE WHILE LOOP SU BLOCCO PRECEDENTE)
+
+if [ "$msg" == "y" ]
+then
+    conda-basic
+fi
+
+### installing basic ML libraries
+conda install -y -c anaconda pandas ||
+    echo "An error occurred while installing pandas"
+
+conda install -y -c anaconda scikit-learn ||
+    echo "An error occurred while installing scikit-learn"
+
+exit
+
+
+# TESTARE SU NUOVO ENVIRONMENT

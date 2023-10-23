@@ -24,6 +24,9 @@ then
 fi
 
 ### installing basic ML libraries
+conda install -y -c conda-forge tqdm ||
+    echo "An error occurred while installing tqdm"
+
 conda install -y -c anaconda pandas ||
     echo "An error occurred while installing pandas"
 

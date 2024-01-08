@@ -1,6 +1,6 @@
 # .dotfiles
 
-These are my dofiles.
+These are my dotfiles.
 
 The `bin/` folder contains all the executables I wrote and added to **PATH**.
 

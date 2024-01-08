@@ -3,3 +3,5 @@
 	name = TommasoTarchi
 [core]
 	editor = nvim
+[credential]
+	helper = cache

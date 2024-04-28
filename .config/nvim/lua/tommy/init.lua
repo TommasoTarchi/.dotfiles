@@ -9,5 +9,5 @@ print("Ave!")
 
 -- these are calls to packages
 require("tommy.set")
-require("tommy.copilot")
+--require("tommy.copilot")
 require("tommy.nvimtree")

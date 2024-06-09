@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-### adds basic scientific packages to conda environment
+# adds basic scientific packages to conda environment
 
 
 conda install -y -c anaconda numpy ||

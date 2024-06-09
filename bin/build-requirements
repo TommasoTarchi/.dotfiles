@@ -1,0 +1,28 @@
+#!/bin/bash
+
+
+# produces a requirements.txt file containing instructions
+# to build environment with conda
+
+
+get_env_name() {
+  read -p "No conda environment name supplied, please insert one: " ENV_NAME
+}
+
+
+# get name of environment to be exported
+if [ -z "$1" ]; then
+  get_env_name
+else
+  ENV_NAME=$1
+fi
+
+
+source activate "$ENV_NAME"
+
+echo "Exporting conda environment..."
+conda list --export > requirements.txt
+
+conda deactivate
+
+echo "Requirement file has been generated successfully."

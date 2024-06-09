@@ -1,11 +1,11 @@
 #!/bin/bash
 
 
-### adds basic scientific (optional) and machine learning packages to 
-### conda environment
+# adds basic scientific (optional) and machine learning packages to 
+# conda environment
 
 
-### installing basic scientific packages
+# installing basic scientific packages
 echo "Do you want to install basic scientific packages as well? (y/[n])"
 while true
 do
@@ -23,7 +23,7 @@ then
     conda-basic
 fi
 
-### installing basic ML libraries
+# installing basic ML libraries
 conda install -y -c conda-forge tqdm ||
     echo "An error occurred while installing tqdm"
 

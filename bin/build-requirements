@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-# produces a requirements.txt file containing instructions
-# to build environment with conda
+# produces a YAML file that can be then be used to rebuild
+# the environment using conda
 
 
 get_env_name() {
@@ -18,11 +18,12 @@ else
 fi
 
 
-source activate "$ENV_NAME"
+# export conda environment to YAML
+echo "Exporting conda environment and correctly formatting..."
+conda env export --name "$ENV_NAME" --no-builds --file temp.yml
 
-echo "Exporting conda environment..."
-conda list --export > requirements.txt
+# remove prefix line
+grep -v "^prefix:" temp.yml > environment.yml
+rm temp.yml
 
-conda deactivate
-
-echo "Requirement file has been generated successfully."
+echo "YAML file has been generated successfully."

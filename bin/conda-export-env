@@ -2,12 +2,15 @@
 
 
 # produces a YAML file (environment.yaml) saving the state of the given
-# conda environment (with package versions)
+# conda environment (with package versions) and a requirements.txt
+# file
 #
-# the produced file can be used to generate a new environment with the
-# configuration through 'conda env create -f environment.yaml'
+# the produced files can be used to generate a new environment with the
+# configuration through 'conda env create -f environment.yaml', or to
+# install packages via pip using 'pip install -r requirements.txt'
 #
-# NOTICE: the program overwrites environment.yaml, if existing
+# NOTICE: the program overwrites environment.yaml and requirements.txt,
+# if existing
 
 
 get_env_name() {
@@ -80,9 +83,27 @@ while IFS= read -r line; do
 done < temp2.yaml
 
 
+echo "YAML file has been generated successfully."
+
+
+echo "Generating requirements file..."
+
+# remove requirements file if already present
+if [ -f requirements.txt ]; then
+    rm requirements.txt
+fi
+
+# write packages with version to file
+touch requirements.txt
+n_packages=${#packages[@]}
+for ((i=0; i<n_packages; i++)); do
+    echo "${packages[i]}==${versions[i]}" >> requirements.txt
+done
+
+
+echo "Requirements file generated successfully."
+
+
 # clean directory
 rm temp1.yaml
 rm temp2.yaml
-
-
-echo "YAML file has been generated successfully."

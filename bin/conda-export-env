@@ -1,0 +1,88 @@
+#!/bin/bash
+
+
+# produces a YAML file (environment.yaml) saving the state of the given
+# conda environment (with package versions)
+#
+# the produced file can be used to generate a new environment with the
+# configuration through 'conda env create -f environment.yaml'
+#
+# NOTICE: the program overwrites environment.yaml, if existing
+
+
+get_env_name() {
+  read -r -p "No conda environment name supplied, please insert one: " ENV_NAME
+}
+
+
+# get name of environment to be exported
+if [ -z "$1" ]; then
+  get_env_name
+else
+  ENV_NAME=$1
+fi
+
+
+echo "Exporting conda environment..."
+
+# export conda environment to YAML
+conda env export --from-history --name "$ENV_NAME" --file temp1.yaml
+
+# remove environment name, redundant channels and prefix
+sed -i '1s/^name: .*/name: <your_env_name>/' temp1.yaml
+sed -i 's/ \([^ ]*::\)//g' temp1.yaml
+grep -v "^prefix:" temp1.yaml > temp2.yaml
+
+
+echo "Retrieving package versions..."
+
+# read package names from YAML
+packages=()
+found=false
+while IFS= read -r line; do
+    if [ "$found" = true ]; then
+        packages+=("${line:3}")
+    fi
+
+    if [ "$line" = "dependencies:" ]; then
+        found=true
+    fi
+done < temp2.yaml
+
+# get package versions from conda
+versions=()
+for package in "${packages[@]}"; do
+    conda_list_out=$(conda list --name "$ENV_NAME" "$package")
+    versions+=("$(echo "$conda_list_out" | awk 'NR==4 {print $2}')")
+done
+
+# remove YAML file if already present
+if [ -f environment.yaml ]; then
+    rm environment.yaml
+fi
+
+# add package versions to YAML
+touch environment.yaml
+found=false
+version_id=0
+while IFS= read -r line; do
+    if [ "$found" = false ]; then
+        echo "$line" >> environment.yaml
+    else
+        temp_line="${line}=${versions[version_id]}"
+        echo "${temp_line:0:3} ${temp_line:3}" >> environment.yaml
+        ((version_id++))
+    fi
+
+    if [ "$line" = "dependencies:" ]; then
+        found=true
+    fi
+done < temp2.yaml
+
+
+# clean directory
+rm temp1.yaml
+rm temp2.yaml
+
+
+echo "YAML file has been generated successfully."
